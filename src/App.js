@@ -1,15 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { WalletConnectionProvider } from './WalletConnectionProvider';
+import SwapButton from './SwapButton';
 import './App.css';
-import TokenTransfer from './TokenTransfer';
-import TestTransfer from './TestTransfer';
-import TestSolTransfer from './TestSolTransfer';
-
+import SwapComponent from './SwapComponent';
 
 function App() {
   return (
-    <>
-     <TestTransfer />
-    </>
+    <WalletConnectionProvider>
+      <div className="App">
+        <header className="App-header">
+          <WalletMultiButton />
+          <SwapComponent />
+        </header>
+      </div>
+    </WalletConnectionProvider>
   );
 }
 
