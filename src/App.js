@@ -4,12 +4,13 @@ import { WalletConnectionProvider } from './WalletConnectionProvider';
 import './App.css';
 import SwapComponent from './SwapComponent';
 import TestTransfer from './TestTransfer';
-import SolflareIncluded from './SolflareIncluded'
+import SolflareIncluded from './SolflareIncluded';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <>
-     <SolflareIncluded />
+     <Navbar />
     </>
   );
 }
